@@ -41,14 +41,8 @@ public class Main {
                     max--;
                 }
             }
-            int size = 0;
-            if (helpArray.length % 2 == 0) {
-                size = helpArray.length / 2;
-            } else {
-                size = helpArray.length / 2;
-            }
-            int[] firstArray = Arrays.copyOf(helpArray, size);
-            int[] secondArrays = Arrays.copyOfRange(helpArray, size, helpArray.length);
+            int[] firstArray = Arrays.copyOf(helpArray, helpArray.length / 2);
+            int[] secondArrays = Arrays.copyOfRange(helpArray, helpArray.length / 2, helpArray.length);
             if (firstArray.length > 1 || secondArrays.length > 1) {
                 sortThanos(firstArray);
                 sortThanos(secondArrays);
